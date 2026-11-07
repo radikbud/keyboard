@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUDANGTECH B2B - Pusat Kulakan Aksesoris & Gadget Murah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            accent: '#FF5E00',
+                            gold: '#FFD700',
+                            red: '#DC2626',
+                            emerald: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #FF5E00; border-radius: 4px; }
+        .glow-orange { box-shadow: 0 0 25px rgba(255, 94, 0, 0.35); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-orange-500 selection:text-white pb-20 md:pb-0">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-red-700 via-orange-600 to-red-700 text-white py-2 px-4 text-center text-xs md:text-sm font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 shadow-lg">
+        <i class="fa-solid fa-store text-yellow-300"></i>
+        <span>PUSAT KULAKAN GROSIR KHUSUS PEDAGANG & RESELLER - TANPA DELIV/KURIR (AMBIL LANGSUNG DI RUKO)</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-r from-orange-500 to-red-600 text-white font-black px-3.5 py-1.5 rounded-xl text-lg font-heading shadow-md">
+                    GUDANG<span class="text-yellow-300">GROSIR</span>
+                </div>
+                <span class="hidden md:inline-block bg-slate-800 text-slate-300 border border-slate-700 text-xs font-bold px-3 py-1 rounded-full">
+                    <i class="fa-solid fa-boxes-packing text-orange-400 mr-1.5"></i> PORTAL B2B / KULAKAN PARTAI
+                </span>
+            </div>
+
+            <button onclick="scrollToOrderForm()" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-4 py-2 rounded-xl font-extrabold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Form Ambil Barang</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO B2B SECTION -->
+    <section class="relative pt-10 pb-14 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 font-extrabold px-4 py-1.5 rounded-full text-xs sm:text-sm mb-4 uppercase tracking-wider">
+                <i class="fa-solid fa-dolly"></i> SUPPLIER TANGAN PERTAMA - PUSAT DISTRIBUSI PARTAI BESAR
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black font-heading text-white leading-tight mb-4">
+                OBRAL GROSIR KULAKAN <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500">
+                    HARGA BOTTOM DI BAWAH PASARAN!
+                </span>
+            </h1>
+
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
+                Khusus pemilik toko, konter HP, pedagang e-commerce, dan reseller. Stok dijamin baru 100%. Margin untung tinggi untuk dijual kembali!
+            </p>
+
+            <!-- IMPORTANT PICKUP LOCATION CARD -->
+            <div class="bg-slate-900/90 border-2 border-orange-500/80 p-5 rounded-2xl max-w-2xl mx-auto shadow-2xl text-left glow-orange relative overflow-hidden mb-6">
+                <div class="absolute top-0 right-0 bg-orange-500 text-slate-950 text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest">
+                    PENTING: SISTEM SELF PICK-UP
+                </div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <div class="w-12 h-12 bg-orange-500/20 text-orange-400 rounded-xl flex items-center justify-center text-2xl shrink-0 border border-orange-500/40">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base flex items-center gap-2">
+                            Alamat Pengambilan Barang (Ambil Langsung):
+                        </h3>
+                        <p class="text-yellow-400 font-extrabold text-sm sm:text-base mt-0.5">
+                            Ruko The Walk No. 17, Jakarta Garden City, Cakung, Jakarta Timur
+                        </p>
+                        <p class="text-slate-400 text-xs mt-1">
+                            <i class="fa-solid fa-circle-info text-orange-400 mr-1"></i> Tidak melayani pengiriman paket (No Delivery). Pembeli / Kurir pribadi wajib datang langsung ke ruko.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRUST METRICS -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto text-xs font-bold text-slate-300">
+                <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                    <i class="fa-solid fa-boxes-stacked text-orange-400 text-base mb-1 block"></i> Minimum Order Per Dus/Partai
+                </div>
+                <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                    <i class="fa-solid fa-money-bill-trend-up text-emerald-400 text-base mb-1 block"></i> Profit Margin s/d 100%
+                </div>
+                <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                    <i class="fa-solid fa-building-circle-check text-blue-400 text-base mb-1 block"></i> Gudang Resmi di Cakung
+                </div>
+                <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                    <i class="fa-solid fa-handshake-angle text-yellow-400 text-base mb-1 block"></i> Cek Fisik Barang On-the-Spot
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS LIST B2B -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-black font-heading text-white">KATALOG HARGA KULAKAN PARTAI (11 PRODUK)</h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Harga tertera adalah harga satuan kulakan partai grosir. Garansi termurah se-Indonesia!</p>
+            </div>
+            <div class="bg-slate-900 text-orange-400 border border-orange-500/30 px-3.5 py-1.5 rounded-xl text-xs font-extrabold flex items-center gap-2">
+                <i class="fa-solid fa-layer-group"></i> Total 11 Item Ready Stock
+            </div>
+        </div>
+
+        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic JS products injection -->
+        </div>
+    </main>
+
+    <!-- ORDER RECAP & PICKUP FORM -->
+    <section id="order-section" class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="bg-orange-500/10 text-orange-400 border border-orange-500/30 px-3 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase">
+                    FORM PEMESANAN KULAKAN
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black font-heading text-white mt-2">REKAP ORDER & JADWAL AMBIL BARANG</h2>
+                <p class="text-slate-400 text-sm">Isi data pedagang / toko Anda di bawah ini untuk konfirmasi pengambilan di Ruko Cakung.</p>
+            </div>
+
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                <form onsubmit="submitBulkOrder(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5">Nama Toko / Nama Pemesan *</label>
+                            <input type="text" id="store-name" required placeholder="Contoh: Toko Berkah Cell / Budi" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5">Nomor WhatsApp Aktif *</label>
+                            <input type="tel" id="store-phone" required placeholder="Contoh: 081234567890" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5">Rencana Tanggal Pengambilan *</label>
+                            <input type="date" id="pickup-date" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5">Perkiraan Jam Datang *</label>
+                            <select id="pickup-time" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
+                                <option value="Sesi Pagi (09:00 - 12:00 WIB)">Sesi Pagi (09:00 - 12:00 WIB)</option>
+                                <option value="Sesi Siang (13:00 - 17:00 WIB)">Sesi Siang (13:00 - 17:00 WIB)</option>
+                                <option value="Sesi Malam (18:30 - 21:00 WIB)">Sesi Malam (18:30 - 21:00 WIB)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Pickup Address Lock Card -->
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-xs space-y-1">
+                        <span class="font-bold text-orange-400 block">Lokasi Pengambilan Barang:</span>
+                        <p class="text-white font-semibold">Ruko The Walk No. 17, Jakarta Garden City, Cakung, Jakarta Timur</p>
+                        <p class="text-slate-400">Pembayaran dilakukan di lokasi setelah cek fisik & perhitungan kuantitas barang selesai.</p>
+                    </div>
+
+                    <!-- Summary Price -->
+                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
+                        <span class="text-slate-400 text-sm font-bold">Total Perkiraan Kulakan:</span>
+                        <span id="grand-total-display" class="text-2xl font-black text-yellow-400 font-heading">Rp 0</span>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-black py-4 rounded-xl shadow-xl transition flex items-center justify-center gap-3 text-base sm:text-lg">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>KIRIM DAFTAR KULAKAN VIA WHATSAPP</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-extrabold text-slate-300">GUDANGTECH B2B WHOLESALE & DISTRIBUTOR</p>
+            <p class="text-slate-400">Ruko The Walk No. 17, Jakarta Garden City, Cakung, Jakarta Timur</p>
+            <p class="text-[10px] text-slate-600 pt-2">&copy; 2026 GudangTech Indonesia. Khusus Transaksi Grosir & Kulakan Pedagang.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT B2B LOGIC -->
+    <script>
+        // 11 Complete Products with B2B Wholesale Specs & Bottom Price
+        const b2bProducts = [
+            {
+                id: 1,
+                name: "K-Snake K98 Dual-Mode Wireless Mechanical Keyboard",
+                category: "Keyboard & PC",
+                marketPrice: 450000,
+                wholesalePrice: 195000,
+                moq: 5,
+                unit: "unit",
+                image: "keyboard-k98.png",
+                features: "Tri-mode (BT/2.4G/Wired), Gasket Structure, Multi-OS, RGB Backlight"
+            },
+            {
+                id: 2,
+                name: "K-Snake KM800 RGB Gaming Keyboard & Mouse Set",
+                category: "Keyboard & PC",
+                marketPrice: 280000,
+                wholesalePrice: 110000,
+                moq: 10,
+                unit: "set",
+                image: "keyboard-km800.png",
+                features: "Combo Keyboard + Mouse, Rainbow RGB, Membrane Tactile Feel"
+            },
+            {
+                id: 3,
+                name: "K-Snake K3 Fashion Business Retro Keyboard",
+                category: "Keyboard & PC",
+                marketPrice: 220000,
+                wholesalePrice: 85000,
+                moq: 10,
+                unit: "unit",
+                image: "keyboard-k3.png",
+                features: "Desain Retro Keycap Minimalis, Empuk, High Durability"
+            },
+            {
+                id: 4,
+                name: "Smartwatch i8 Pro Max Series 8 (Bluetooth Call)",
+                category: "Gadget & Smartwatch",
+                marketPrice: 200000,
+                wholesalePrice: 75000,
+                moq: 10,
+                unit: "unit",
+                image: "smartwatch-i8.png",
+                features: "Bisa Telepon via BT, Monitor Detak Jantung, Custom Wallpaper"
+            },
+            {
+                id: 5,
+                name: "Wireless Silent Mouse Slim (Rechargeable)",
+                category: "Aksesoris PC",
+                marketPrice: 120000,
+                wholesalePrice: 38000,
+                moq: 20,
+                unit: "unit",
+                image: "mouse-wireless.png",
+                features: "Klik Senyap, Baterai Cas Type-C/USB, 1600 DPI Adjustable"
+            },
+            {
+                id: 6,
+                name: "M10 TWS Wireless Earbuds (LED Display Case)",
+                category: "Audio",
+                marketPrice: 150000,
+                wholesalePrice: 42000,
+                moq: 20,
+                unit: "unit",
+                image: "tws-m10.png",
+                features: "Indikator Baterai LED, High Bass Audio, Powerbank Case"
+            },
+            {
+                id: 7,
+                name: "Pro 6 TWS Wireless Earbuds (Air Style)",
+                category: "Audio",
+                marketPrice: 160000,
+                wholesalePrice: 48000,
+                moq: 20,
+                unit: "unit",
+                image: "tws-pro6.jpeg",
+                features: "Desain Ringkas Ergonomis, Auto Pairing, Touch Control"
+            },
+            {
+                id: 8,
+                name: "HM11 Vintage Portable Wireless Speaker",
+                category: "Audio",
+                marketPrice: 190000,
+                wholesalePrice: 69000,
+                moq: 10,
+                unit: "unit",
+                image: "hm11.jpeg",
+                features: "Radio Retro Classic Design, Suara Nyaring Deep Bass, Strap Leather"
+            },
+            {
+                id: 9,
+                name: "J20 Space Travel Astronaut Bluetooth Speaker",
+                category: "Audio & Decor",
+                marketPrice: 250000,
+                wholesalePrice: 89000,
+                moq: 10,
+                unit: "unit",
+                image: "speaker-j20.png",
+                features: "Bentuk Astronot Unik, Built-in Warm Night Light, Stereo Speaker"
+            },
+            {
+                id: 10,
+                name: "Starry Sky Galaxy Star Projector UFO",
+                category: "Lampu & Dekorasi",
+                marketPrice: 300000,
+                wholesalePrice: 105000,
+                moq: 5,
+                unit: "unit",
+                image: "projector-starry.png",
+                features: "Proyektor Nebula RGB, Lampu Tidur Galaxy, Remote Control Included"
+            },
+            {
+                id: 11,
+                name: "QC 3.0 Fast Car Charger Multi-Port (12V-24V)",
+                category: "Aksesoris Mobil",
+                marketPrice: 95000,
+                wholesalePrice: 27000,
+                moq: 30,
+                unit: "unit",
+                image: "charger-qc30.jpeg",
+                features: "Dual Port Fast Charging, Metalic Body, Overheat Protection"
+            }
+        ];
+
+        // Store selected quantities: { productId: quantity }
+        let selectedQuantities = {};
+
+        function formatRupiah(number) {
+            return 'Rp ' + number.toLocaleString('id-ID');
+        }
+
+        // Initialize Products
+        function renderB2BProducts() {
+            const container = document.getElementById('products-grid');
+            container.innerHTML = '';
+
+            b2bProducts.forEach(prod => {
+                // Default quantity is MOQ
+                if (!selectedQuantities[prod.id]) {
+                    selectedQuantities[prod.id] = 0;
+                }
+
+                const profitMargin = Math.round(((prod.marketPrice - prod.wholesalePrice) / prod.wholesalePrice) * 100);
+
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-orange-500/50 transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative bg-slate-950 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                            <img src="${prod.image}" alt="${prod.name}" class="object-contain max-h-full max-w-full" onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=Produk+Grosir'">
+                            <div class="absolute top-2 left-2 bg-gradient-to-r from-emerald-600 to-green-500 text-white font-black text-[11px] px-2.5 py-1 rounded-md shadow-md">
+                                PROFIT RE-SELL +${profitMargin}%
+                            </div>
+                            <div class="absolute top-2 right-2 bg-slate-900/90 text-orange-400 border border-orange-500/30 text-[10px] font-extrabold px-2 py-0.5 rounded-full">
+                                MOQ: ${prod.moq} ${prod.unit}
+                            </div>
+                        </div>
+
+                        <div class="p-5 space-y-3">
+                            <span class="text-[10px] font-extrabold uppercase tracking-wider text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
+                                ${prod.category}
+                            </span>
+                            <h3 class="font-extrabold text-white text-base leading-snug line-clamp-2">
+                                ${prod.name}
+                            </h3>
+                            <p class="text-slate-400 text-xs border-b border-slate-800 pb-3">
+                                <i class="fa-solid fa-check text-emerald-400 mr-1"></i> ${prod.features}
+                            </p>
+
+                            <!-- Price Calculation -->
+                            <div class="pt-1">
+                                <div class="text-xs text-slate-400">Harga Pasaran Eceran: <span class="line-through text-slate-500 font-semibold">${formatRupiah(prod.marketPrice)}</span></div>
+                                <div class="text-2xl font-black text-yellow-400 font-heading mt-0.5">
+                                    ${formatRupiah(prod.wholesalePrice)} <span class="text-xs text-slate-400 font-normal">/${prod.unit}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Input Box -->
+                    <div class="p-5 bg-slate-950 border-t border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between text-xs font-bold text-slate-300">
+                            <span>Jumlah Ambil (Min. ${prod.moq}):</span>
+                            <span id="subtotal-${prod.id}" class="text-orange-400 font-extrabold">Rp 0</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="adjustQty(${prod.id}, -${prod.moq})" class="bg-slate-800 hover:bg-slate-700 text-white font-bold w-10 h-10 rounded-xl flex items-center justify-center text-lg">-</button>
+                            <input type="number" id="qty-${prod.id}" value="${selectedQuantities[prod.id]}" min="0" step="${prod.moq}" onchange="setQty(${prod.id}, this.value)" class="w-full bg-slate-900 border border-slate-700 text-center text-white font-bold text-sm py-2 rounded-xl focus:outline-none focus:border-orange-500">
+                            <button type="button" onclick="adjustQty(${prod.id}, ${prod.moq})" class="bg-orange-500 hover:bg-orange-600 text-white font-bold w-10 h-10 rounded-xl flex items-center justify-center text-lg">+</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            updateGrandTotal();
+        }
+
+        function adjustQty(id, delta) {
+            const prod = b2bProducts.find(p => p.id === id);
+            let current = selectedQuantities[id] || 0;
+            let updated = current + delta;
+
+            if (updated < 0) updated = 0;
+            // If user starts adding from 0, jump to MOQ directly
+            if (current === 0 && delta > 0) updated = prod.moq;
+
+            selectedQuantities[id] = updated;
+            document.getElementById(`qty-${id}`).value = updated;
+            updateSubtotal(id);
+        }
+
+        function setQty(id, val) {
+            let num = parseInt(val) || 0;
+            if (num < 0) num = 0;
+            selectedQuantities[id] = num;
+            updateSubtotal(id);
+        }
+
+        function updateSubtotal(id) {
+            const prod = b2bProducts.find(p => p.id === id);
+            const qty = selectedQuantities[id] || 0;
+            const subtotal = qty * prod.wholesalePrice;
+            document.getElementById(`subtotal-${id}`).innerText = formatRupiah(subtotal);
+            updateGrandTotal();
+        }
+
+        function updateGrandTotal() {
+            let grandTotal = 0;
+            b2bProducts.forEach(prod => {
+                const qty = selectedQuantities[prod.id] || 0;
+                grandTotal += qty * prod.wholesalePrice;
+            });
+            document.getElementById('grand-total-display').innerText = formatRupiah(grandTotal);
+        }
+
+        function scrollToOrderForm() {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitBulkOrder(e) {
+            e.preventDefault();
+
+            const storeName = document.getElementById('store-name').value.trim();
+            const storePhone = document.getElementById('store-phone').value.trim();
+            const pickupDate = document.getElementById('pickup-date').value;
+            const pickupTime = document.getElementById('pickup-time').value;
+
+            // Collect selected items
+            let itemsSummary = [];
+            let totalAmount = 0;
+
+            b2bProducts.forEach(prod => {
+                const qty = selectedQuantities[prod.id] || 0;
+                if (qty > 0) {
+                    const sub = qty * prod.wholesalePrice;
+                    totalAmount += sub;
+                    itemsSummary.push(`• ${prod.name}\n  Qty: ${qty} ${prod.unit} x ${formatRupiah(prod.wholesalePrice)} = ${formatRupiah(sub)}`);
+                }
+            });
+
+            if (itemsSummary.length === 0) {
+                alert('Mohon pilih minimal 1 produk kulakan terlebih dahulu!');
+                return;
+            }
+
+            // Construct WhatsApp Message
+            const waMessage = 
+`HALO GUDANGTECH B2B, SAYA MAU CONFIRM ORDER KULAKAN:
+
+*DATA PEMESAN:*
+• Nama Toko/Pemesan: ${storeName}
+• No. WhatsApp: ${storePhone}
+
+*DAFTAR BARANG KULAKAN:*
+${itemsSummary.join('\n\n')}
+
+*TOTAL PERKIRAAN KULAKAN:* ${formatRupiah(totalAmount)}
+
+*JADWAL PENGAMBILAN (SELF PICK-UP):*
+• Tanggal: ${pickupDate}
+• Sesi Waktu: ${pickupTime}
+• Lokasi: Ruko The Walk No. 17, Jakarta Garden City, Cakung, Jakarta Timur
+
+Mohon konfirmasi kesiapan stok & tempatkan antrean barang di ruko. Terima kasih!`;
+
+            const encodedWA = encodeURIComponent(waMessage);
+            // Open WA link
+            window.open(`https://wa.me/?text=${encodedWA}`, '_blank');
+        }
+
+        // Initial setup
+        window.onload = function() {
+            // Set default pickup date tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('pickup-date').value = tomorrow.toISOString().split('T')[0];
+
+            renderB2BProducts();
+        };
+    </script>
+</body>
+</html>
