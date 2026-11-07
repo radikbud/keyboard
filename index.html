@@ -162,7 +162,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-slate-300 uppercase mb-1.5">Nomor WhatsApp Aktif *</label>
-                            <input type="tel" id="store-phone" required placeholder="Contoh: 081234567890" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
+                            <input type="tel" id="store-phone" required placeholder="Contoh: 082261742202" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500">
                         </div>
                     </div>
 
@@ -212,8 +212,21 @@
         </div>
     </footer>
 
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/6282261742202?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20grosir%20di%20GudangTech." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold p-4 sm:px-6 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 transform hover:scale-105 animate-bounce">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="hidden sm:inline text-sm font-heading tracking-wide">Hubungi Kami via WA</span>
+        </a>
+    </div>
+
     <!-- JAVASCRIPT B2B LOGIC -->
     <script>
+        const waTargetNumber = "6282261742202";
+
         // 11 Complete Products with B2B Wholesale Specs & Bottom Price
         const b2bProducts = [
             {
@@ -339,20 +352,17 @@
             }
         ];
 
-        // Store selected quantities: { productId: quantity }
         let selectedQuantities = {};
 
         function formatRupiah(number) {
             return 'Rp ' + number.toLocaleString('id-ID');
         }
 
-        // Initialize Products
         function renderB2BProducts() {
             const container = document.getElementById('products-grid');
             container.innerHTML = '';
 
             b2bProducts.forEach(prod => {
-                // Default quantity is MOQ
                 if (!selectedQuantities[prod.id]) {
                     selectedQuantities[prod.id] = 0;
                 }
@@ -384,7 +394,6 @@
                                 <i class="fa-solid fa-check text-emerald-400 mr-1"></i> ${prod.features}
                             </p>
 
-                            <!-- Price Calculation -->
                             <div class="pt-1">
                                 <div class="text-xs text-slate-400">Harga Pasaran Eceran: <span class="line-through text-slate-500 font-semibold">${formatRupiah(prod.marketPrice)}</span></div>
                                 <div class="text-2xl font-black text-yellow-400 font-heading mt-0.5">
@@ -394,7 +403,6 @@
                         </div>
                     </div>
 
-                    <!-- Quantity Input Box -->
                     <div class="p-5 bg-slate-950 border-t border-slate-800 space-y-3">
                         <div class="flex items-center justify-between text-xs font-bold text-slate-300">
                             <span>Jumlah Ambil (Min. ${prod.moq}):</span>
@@ -418,7 +426,6 @@
             let updated = current + delta;
 
             if (updated < 0) updated = 0;
-            // If user starts adding from 0, jump to MOQ directly
             if (current === 0 && delta > 0) updated = prod.moq;
 
             selectedQuantities[id] = updated;
@@ -462,7 +469,6 @@
             const pickupDate = document.getElementById('pickup-date').value;
             const pickupTime = document.getElementById('pickup-time').value;
 
-            // Collect selected items
             let itemsSummary = [];
             let totalAmount = 0;
 
@@ -480,7 +486,6 @@
                 return;
             }
 
-            // Construct WhatsApp Message
             const waMessage = 
 `HALO GUDANGTECH B2B, SAYA MAU CONFIRM ORDER KULAKAN:
 
@@ -501,13 +506,10 @@ ${itemsSummary.join('\n\n')}
 Mohon konfirmasi kesiapan stok & tempatkan antrean barang di ruko. Terima kasih!`;
 
             const encodedWA = encodeURIComponent(waMessage);
-            // Open WA link
-            window.open(`https://wa.me/?text=${encodedWA}`, '_blank');
+            window.open(`https://wa.me/${waTargetNumber}?text=${encodedWA}`, '_blank');
         }
 
-        // Initial setup
         window.onload = function() {
-            // Set default pickup date tomorrow
             const tomorrow = new Date();
             tomorrow.setDate(tomorrow.getDate() + 1);
             document.getElementById('pickup-date').value = tomorrow.toISOString().split('T')[0];
